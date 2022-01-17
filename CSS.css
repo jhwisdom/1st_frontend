@@ -1,0 +1,159 @@
+/* 초기화*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body{
+	width:1200px;
+	height: 250px;
+	margin: 0 150px 0 150px;
+	
+	display: table;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#title h1{
+
+	height:300px;
+	line-height: 300px;
+	text-align: center;
+}
+
+.select {
+	list-style: none;
+	height: 86px;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+.select a{
+	/*float: right;*/
+	text-align: center;
+	line-height:86px;
+	width:80px;
+	
+	text-decoration: none; /*all:unset;*/
+	color: black;	
+	font-weight: bold;
+	
+	display: block;
+}
+
+
+#searchframe {
+	height: 100px;
+}
+
+
+
+
+nav {
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	
+	list-style: none;
+	background: gray;
+}
+
+
+.navigation a {
+	text-decoration: none;
+	color: black;	
+	font-weight: bold;
+	font-size: 20px;
+	width: 80px;
+	text-align: center;
+	display: block;
+	padding: 20px;
+}
+
+
+.navigation a:hover {
+	background: white;
+}
+
+
+/* //////반응형은 아직 좀 어렵다..//////
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+  .select {
+  	justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation, .select {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}*/
+
+
+
+/*메인 영화 포스터*/
+.poster {
+	height: 256px;
+	width: 179px;
+	
+}
+
+.mainmv {
+	height: 350px;
+	width: 200px;
+	text-align: center;
+	margin: 0 20px 100px 20px;
+	float: left;
+	cursor: pointer; 
+}
+
+.mainmv h3{
+	margin-top: 15px;	
+}
+
+#main {
+	justify-content: space-around;
+	
+}
+
+
+
+#sc {
+	position:absolute;
+	float:left;
+	border:1px solid gray;
+	height: 70px;
+	width: 1118px;
+	padding-left: 80px;
+	font-size: 50px;
+	
+}
+
+#glass {
+	height: 50px;
+	width: 50px;
+	margin:10px;
+}
+
+.scimg {
+	position: relative;
+	float: left;
+}
+

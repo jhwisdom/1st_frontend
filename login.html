@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<link href = "CSS.css" type="text/css" rel="stylesheet">
+
+<style type="text/css">
+
+
+#frame {
+	margin-top:100px;
+	margin-bottom: 100px;
+}
+
+
+p {
+	margin: 20px 0 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.loginfield {
+	padding: 50px 0 50px 420px;
+}
+
+
+.loginfield input{
+	justify-content:right;
+	/*float: right;*/
+	border: 1px solid gray;
+	height: 25px;
+	width: 200px; 
+} 
+
+td {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"]{
+	width: 80px;
+	height: 25px;
+	font-size: 16px;
+	margin-right: 30px;
+}
+
+</style>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type = "text/javascript">
+
+/* 헤더 부분 불러오기 */
+$(document).ready( function() {
+	$("#header").load("./header.html"); 
+});
+/*////////////*/
+
+</script>
+
+<script>
+
+	function check() {
+		if(id.value=="") {
+			alert('아이디를 입력해주세요');
+			return false;
+		} else if(password.value==""){
+			alert('비밀번호를 입력해주세요');
+			return false;
+		} else
+			return true;
+	};
+	
+	
+	
+	/*엔터키 누르면 check()가 true일때 로그인 되도록 
+	출처: https://developer-joe.tistory.com/106 */
+	function onEnterLogin(){
+		var keyCode = window.event.keyCode;
+		
+		if(keyCode==13 && check()==true) {
+			loginForm.submit();
+		}
+		
+	};
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+<!-- 헤더 부분 불러오기  -->
+ <div id="header"></div>
+<!-- //////////// -->
+
+
+
+<!-- 로그인 내용 -->
+	<div id="frame">
+		<!-- <p>영화 평점 커뮤니티에 오신 것을 환영합니다<p>  -->
+		<form method="post" name="loginForm">
+			<fieldset class="loginfield">
+		
+				<table>
+					<tr>
+						<td width=100px><label for="id">아이디</label></td>
+						<td><input type="text" id="id" name="id" title="아이디입력" tabindex="1"/></td>
+					</tr>
+					<tr>
+						<td width=100px><label for="password">비밀번호</label></td>
+						<td><input type="text" id="password" title="비밀번호입력" tabindex="2"/></td>
+					</tr>
+				
+					<tr>
+			
+						<td colspan="2" height=70px style="text-align: center">
+						<input type="submit" id="login" value="로그인" onclick="check()" tabindex="3">
+						<input type="reset" value="취  소" tabindex="4">
+						<input type="button" id="membership" value="회원가입" tabindex="5" onclick="location.href='./members.html'">
+						</td>	
+					
+					</tr>
+				</table>	
+		
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

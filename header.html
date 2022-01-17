@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>header</title>
+<link href = "CSS.css" type="text/css" rel="stylesheet">
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type = "text/javascript">
+
+
+function enterSearch() {
+	var mvName = document.getElementById('sc');
+	if (event.keyCode ==13 && mvName.value != ""){
+		mvName.value=null;	
+		alert("검색 중입니다.");
+	} else if(event.keyCode ==13 && mvName.value == "") {
+		alert("내용을 입력해주세요.")
+	}
+	
+};
+
+
+	
+</script>
+
+
+</head>
+<body>
+<!-- 헤더 부분 -->
+<header>
+
+	<div id="choice">
+	<ul class="select">
+		<li><a href="./index(home).html">메인</a></li>
+		<li><a href="#">좋아요</a></li>
+		<li><a href="./login.html">로그인</a></li>
+		<li><a href="./members.html">회원가입</a></li>
+	</ul>
+	</div>
+
+	<div id="title" onclick="location.href='./index(home).html'">
+		<h1>영화 평점 공유 사이트</h1>
+	</div>
+<!-- //////////////////////////////// -->
+
+
+
+<!-- 검색과 메뉴 부분 -->
+	<div>
+	<fieldset id="searchframe">	
+	<input type="text" id="sc" name="sc" title="영화찾기" onKeyUp="enterSearch()"/>
+	<label class="scimg" for="sc"><img id=glass src="./img/loupe.png"></label>
+	</fieldset>
+	</div>
+
+
+
+	
+	<nav>
+	<ul class="navigation">
+		<li><a href="#">전체</a></li>
+	    <li><a href="#">국가</a></li>
+	    <li><a href="#">장르</a></li>
+	    <li><a href="#">배우</a></li>	
+	    <li><a href="#">감독</a></li>
+	    <li><a href="#">커뮤니티</a></li>
+	</ul>
+	</nav>
+<!-- //////////////////////////////// -->	
+</header>
+</body>
+</html>
